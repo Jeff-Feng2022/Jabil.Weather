@@ -21,6 +21,7 @@ public class Program
             app.UseSwaggerUI();
         }
 
+        app.UseHealthChecks("/health");
         app.UseAuthorization();
 
         app.MapControllers();

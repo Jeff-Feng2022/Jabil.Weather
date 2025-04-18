@@ -8,7 +8,7 @@ EXPOSE 8080
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Jabil.Weather/Jabil.Weather.csproj", "Jabil.Weather/"]
+COPY ["Jabil.Weather.csproj", "Jabil.Weather/"]
 RUN dotnet restore "./Jabil.Weather/Jabil.Weather.csproj"
 COPY . .
 WORKDIR "/src/Jabil.Weather"

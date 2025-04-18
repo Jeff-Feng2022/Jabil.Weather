@@ -23,7 +23,8 @@ WORKDIR /app
 # Enable globalization and invariant mode (optional)
 # ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
 
-EXPOSE 9527
+EXPOSE 80
+EXPOSE 443
 
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Jabil.Weather.dll"]
